@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+     
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Select tools</legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                       
+                        <select>
+                          <option value="0">select Tool from here</option>
+                          <option value="1">Sickle</option>
+                          <option value="2">Digging tool</option>
+                          <option value="3">Hatchat-Axe</option>
+                          <option value="4">Moldboard-plows</option>
+                          <option value="5">Farm Tractor</option>
+                          <option value="6">Hoe</option>
+                          <option value="7">combine tool</option>
+                          <option value="8">Mercedes</option>
+                        </select>
+                    {{ form.tool.label(class="form-control-label") }}
+
+                    {% if form.tool.errors %}
+                        {{ form.tool(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.tool.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.tool(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                        <select>
+                          <option value="0">select duration from here</option>
+                          <option value="1">10 days</option>
+                          <option value="2">15 days</option>
+                          <option value="3">1 month</option>
+                          <option value="4">6 months</option>
+                        </select>
+                        {{ form.duration.label(class="form-control-label") }}
+
+                        {% if form.duration.errors %}
+                            {{ form.duration(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.duration.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.duration(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            <span></span><div class="form-group">
+                <a class="btn btn-outline-info" href="/lists" >Finalise Order</a>
+            </div></span>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer Home Page</title>
+<style>
+  body
+  {
+    background-image:url(
+      "https://image.freepik.com/free-photo/lush-green-rice-field-as-agricultural-background_40369-54.jpg");
+    background-size: 1400px 680px;
+    background-repeat:no-repeat;
+  }
+div
+{
+  margin-top:55px;
+  margin-left:520px;
+}
+    h1{
+      text-align:center;
+      font-size:280%;
+      font-family:"font-family:Verdana, Geneva, Tahoma, sans-serif;";
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: gray;
+  color:black;
+}
+.active {
+  background-color: #4CAF50;
+}
+.button {
+  display: block;
+  border-radius: 4px;
+  background-color:green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="/farmer_home">Home</a></li>
+  <li style="float:right"><a  href="/">Logout</a></li>
+    <li style="float:right"><a  href="/">Back</a></li>
+
+  </ul>
+  <h1>Rent Than Buy</h1>
+
+
+<div>
+
+<a class="button" style="vertical-align:middle" href="/tools"><span>View Tools </span></a>
+<br>
+<a class="button" style="vertical-align:middle" href="/order"><span>Select tools</span></a>
+<br>
+<a class="button" style="vertical-align:middle" href="/extend"><span>Extend Duration </span></a>
+<br>
+<a class="button" style="vertical-align:middle" href="/suggest"><span>Suggest tools</span></a>
+</div>
+</body>
+</html>

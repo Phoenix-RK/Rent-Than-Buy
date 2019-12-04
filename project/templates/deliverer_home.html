@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>Deliverer Home Page</title>
+<style>
+
+body
+{
+  
+   background-repeat:no-repeat;
+   background-color:rgb(224,161,107);
+   /* background-color:rgb(0,181,71); */
+   background-size: 350px 500px;
+   background-position:250px 200px;
+
+
+ }
+ div{
+   background-color: white;
+   width:350px;
+   text-align: :center;
+   margin:auto;
+ }
+  h1{
+    text-align:center;
+    font-size:280%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    text-shadow: 5px 2px green;
+    text-decoration: blueviolet;
+  }
+  h2{
+      text-align:center;
+  }
+  p{
+    text-align: center;
+      font-size:100%;
+      color:black;
+  }
+  </style>
+<body>
+    <h3>Tools outside(info for deliverers)</h3>  
+    <table border=5>  
+        <thead>  
+            <td>Name</td>  
+            <td>address</td>  
+             
+        </thead>  
+          
+        {% for row in rows %}  
+          
+            <tr>  
+                <td>{{row["username"]}}</td>  
+                <td>{{row["door_no"]}}</td>  
+                 
+                 
+            </tr>  
+          
+        {% endfor %}  
+    </table>  
+    <br><br>  
+      
+  </body>
+</html>
